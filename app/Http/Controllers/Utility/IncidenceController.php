@@ -49,7 +49,7 @@ class IncidenceController extends Controller
                 'priority' => 'mid'
             ],
 
-            
+
             [
                 'id' => 4,
                 'title' => 'Incidencia 4',
@@ -89,5 +89,9 @@ class IncidenceController extends Controller
         return Inertia::render('Utility/IncidenceShow', [
             'incidences' => $incidences
         ]);
+    }
+    public function create()
+    {
+        return Inertia::render('Utility/IncidenceCreate', ['customroute' => "utility.incidence.create",]);
     }
 }
